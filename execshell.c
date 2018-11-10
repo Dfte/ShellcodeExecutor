@@ -24,8 +24,8 @@ int main(){
 	memcpy(addr, code, sizeof(code));
 	//Print the starting address of the shellcode in memory
 	printf("Mémoire allouée à : %p", addr);
-	//Dereference the pointer (which means get its value), cast the addr of the shellcode into a function and call it
-	(* ((void(*)()) addr)) ();	
+	//Cast the addr of the shellcode into a function and call it
+	((void(*)()) addr) ();	
 	return 0;
 }
 
